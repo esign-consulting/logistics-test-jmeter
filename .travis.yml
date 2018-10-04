@@ -10,3 +10,6 @@ script:
 cache:
   directories:
     - '$HOME/.m2/repository'
+
+after_success:
+  - sshpass -p $FTP_PASSWORD scp -o StrictHostKeyChecking=no -o BatchMode=no -r target/jmeter/reports/test-plan_*_* $FTP_USER@esign.com.br:public_html/logistics-test-jmeter
