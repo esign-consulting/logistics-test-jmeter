@@ -4,6 +4,6 @@
 
 Project for load testing the [Logistics](https://github.com/esign-consulting/logistics) application. The test is based on [Apache JMeter](https://jmeter.apache.org) and is executed through [Maven](https://maven.apache.org) **(installation required)**.
 
-In order to run the test, execute the command `mvn verify -Dserver.host=<logistics_host>`, replacing *<logistics_host>* by the hostname where the Logistics application is available. The command `mvn verify -Dserver.host=www.esign.com.br`, for example, executes the test against the instance of the application at http://www.esign.com.br/logistics.
+In order to run the test, execute the command `mvn verify -Dserver.host=<logistics_host>`, replacing *<logistics_host>* with the hostname where the Logistics application is available. The command `mvn verify -Dserver.host=www.esign.com.br`, for example, executes the test against the instance of the application at http://www.esign.com.br/logistics.
 
-The test generates reports which is placed in the folder *target/jmeter/reports*. Details about the **JMeter Report Dashboard** can be seen in https://jmeter.apache.org/usermanual/generating-dashboard.html.
+The test generates reports which is placed in the folder *target/jmeter/reports*. The reports generated during every [Travis build](https://travis-ci.org/esign-consulting/logistics-test-jmeter) are uploaded to http://www.esign.com.br/logistics-test-jmeter. Details about the **JMeter Report Dashboard** can be seen in https://jmeter.apache.org/usermanual/generating-dashboard.html.
