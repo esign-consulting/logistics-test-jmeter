@@ -10,7 +10,7 @@ addons:
     - sshpass
 
 script:
-  - mvn verify -Dserver.host=www.esign.com.br
+  - mvn verify -Dserver.host=$LOGISTICS_HOST
 
 cache:
   directories:
