@@ -23,6 +23,7 @@
                 <configuration>
                     <propertiesUser>
                         <server.host>${server.host}</server.host>
+                        <server.port>${server.port}</server.port>
                     </propertiesUser>
                 </configuration>
             </plugin>
