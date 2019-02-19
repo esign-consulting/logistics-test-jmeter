@@ -10,7 +10,7 @@ addons:
     - sshpass
 
 script:
-  - mvn verify -Dserver.host=$LOGISTICS_HOST
+  - mvn verify -Dserver.host=$LOGISTICS_HOST -Dserver.port=$LOGISTICS_PORT
 
 cache:
   directories:
