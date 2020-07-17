@@ -11,8 +11,14 @@
             <plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
                 <artifactId>jmeter-maven-plugin</artifactId>
-                <version>2.7.0</version>
+                <version>3.1.1</version>
                 <executions>
+                    <execution>
+                        <id>configuration</id>
+                        <goals>
+                            <goal>configure</goal>
+                        </goals>
+                    </execution>
                     <execution>
                         <id>jmeter-tests</id>
                         <goals>
@@ -21,6 +27,10 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <generateReports>true</generateReports>
+                    <propertiesSystem>
+                        <jmeterengine.force.system.exit>true</jmeterengine.force.system.exit>
+                    </propertiesSystem>
                     <propertiesUser>
                         <server.host>${server.host}</server.host>
                         <server.port>${server.port}</server.port>
