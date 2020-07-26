@@ -25,8 +25,15 @@
                             <goal>jmeter</goal>
                         </goals>
                     </execution>
+                    <execution>
+                        <id>jmeter-check-results</id>
+                        <goals>
+                            <goal>results</goal>
+                        </goals>
+                    </execution>
                 </executions>
                 <configuration>
+                    <errorRateThresholdInPercent>1</errorRateThresholdInPercent>
                     <generateReports>true</generateReports>
                     <propertiesSystem>
                         <jmeterengine.force.system.exit>true</jmeterengine.force.system.exit>

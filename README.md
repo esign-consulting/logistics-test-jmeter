@@ -14,6 +14,10 @@ In order to run the test, execute the command below, replacing *<logistics_host>
 
 The command `mvn verify -Dserver.host=esign.com.br -Dserver.port=80`, for example, executes the test against the instance of the application at <http://www.esign.com.br/logistics>.
 
+## Test Results
+
+The test .cvs results file is placed in the folder *target/jmeter/results*. During the test execution, if the error rate is greater than 1%, the test fails. This configuration can be changed by modifying the value of *errorRateThresholdInPercent* in the [pom.xml](pom.xml) file.
+
 ## Test Reports
 
 The test generates reports which are placed in the folder *target/jmeter/reports*. The reports generated during [the test execution in Travis CI](https://travis-ci.org/esign-consulting/logistics-test-jmeter) can be seen [here](http://www.esign.com.br/logistics-test-jmeter/test-plan/index.html). More details about the **JMeter Report Dashboard** can be found in [the official documentation](https://jmeter.apache.org/usermanual/generating-dashboard.html).
