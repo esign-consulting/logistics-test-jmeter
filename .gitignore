@@ -1,3 +1,7 @@
 target/
 jmeter.log
 recording.xml
+.classpath
+.project
+.settings/
+.vscode/
