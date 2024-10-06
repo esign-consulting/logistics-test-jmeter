@@ -8,11 +8,13 @@ Project for load testing the [Logistics](https://github.com/esign-consulting/log
 
 ## Test Execution
 
-In order to run the test, execute the command below, replacing *<logistics_host>* and *<logistics_port>* with the hostname/ip and port where the Logistics application is available:
+In order to run the test, execute the command below, replacing *<logistics_host>* and *<logistics_port>* with the hostname/ip and port where the Logistics application is available ("clean" is for deleting previous results):
 
-`mvn verify -Dserver.host=<logistics_host> -Dserver.port=<logistics_port>`
+`mvn clean verify -Dserver.host=<logistics_host> -Dserver.port=<logistics_port>`
 
-The command `mvn verify -Dserver.host=esign.com.br -Dserver.port=80`, for example, executes the test against the instance of the application at <http://www.esign.com.br/logistics>.
+The command `mvn clean verify -Dserver.host=esign.com.br -Dserver.port=80`, for example, executes the test against the instance of the application at <http://www.esign.com.br/logistics>.
+
+You can also execute `docker-compose up -d` to run the Logistics application locally. Then, run the test against it: `mvn clean verify -Dserver.host=localhost -Dserver.port=8080`.
 
 ## Test Results
 
